@@ -1,0 +1,42 @@
+@import "compass";
+
+// Fixed table header CSS
+.ya-fixed-header-wrap {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: -10px;
+
+  &.padded-table table {
+    margin-left: 20px;
+    padding-right: 40px;
+  }
+}
+
+.ya-fixed-header-header {
+  position: fixed;
+  z-index: 150;
+  background: black;
+  *zoom: 1;
+  @include box-shadow(black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px);
+
+  &:before, &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.ya-fixed-header-cell {
+  float: left;
+  font-size: 12px;
+  line-height: 14px;
+  color: gainsboro;
+  @include text-shadow(0 -1px 0 darken(#222, 20%));
+}

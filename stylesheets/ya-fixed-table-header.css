@@ -1,0 +1,30 @@
+.ya-fixed-header-wrap {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: -10px; }
+  .ya-fixed-header-wrap.padded-table table {
+    margin-left: 20px;
+    padding-right: 40px; }
+
+.ya-fixed-header-header {
+  position: fixed;
+  z-index: 150;
+  background: black;
+  *zoom: 1;
+  -webkit-box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px;
+  -moz-box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px;
+  box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px; }
+  .ya-fixed-header-header:before, .ya-fixed-header-header:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .ya-fixed-header-header:after {
+    clear: both; }
+
+.ya-fixed-header-cell {
+  float: left;
+  font-size: 12px;
+  line-height: 14px;
+  color: gainsboro;
+  text-shadow: 0 -1px 0 black; }
