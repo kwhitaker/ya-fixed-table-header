@@ -65,7 +65,7 @@ by Kevin Whitaker
         headerTemplate = "<header class=\"ya-fixed-header-header #{options.headerClasses}\"/>"
         header = $(headerTemplate).prependTo wrapper
         header.css
-          top: wrapper.offset().top
+          top: 0
           left: wrapper.offset().left
           width: wrapper.width()
 
