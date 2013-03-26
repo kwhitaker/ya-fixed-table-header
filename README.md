@@ -17,7 +17,7 @@ From there, just call it against a table as you would any other jQuery plugin:
 
 ```
 $(document).ready(function(){
-  $("#some-table").yaFixedHeader()
+  $("#some-table").yaFixedHeader();
 });
 ```
 

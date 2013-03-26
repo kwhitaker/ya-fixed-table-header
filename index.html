@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Ya-fixed-table-header by kwhitaker</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Ya-fixed-table-header</h1>
+          <h2>A small(ish) jQuery plugin that gives an assigned table a fixed header, which stays in place as the data is scrolled through.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/kwhitaker/ya-fixed-table-header/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/kwhitaker/ya-fixed-table-header/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/kwhitaker/ya-fixed-table-header" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>Usage</h2>
+
+          <p>Make sure you're using <code>jQuery 1.8+</code>, then simply link to the appropriate javascript and stylesheets</p>
+
+          <pre><code>&lt;script src="/javascripts/jquery.ya-fixed-table-header.js"&gt;&lt;/script&gt;
+          &lt;link rel="stylesheet" href="/stylesheets/ya-fixed-table-header.css"&gt;
+          </code></pre>
+
+          <p>From there, just call it against a table as you would any other jQuery plugin:</p>
+
+          <pre><code>$(document).ready(function(){
+            $("#some-table").yaFixedHeader();
+          });
+          </code></pre>
+
+          <h2>Options</h2>
+
+          <p>There are a few options which can be called on the plugin.</p>
+
+          <ul>
+          <li>
+          <code>width</code> - defaults to <code>auto</code> (which is 100%), but can be set to anything you'd like.</li>
+          <li>
+          <code>height</code> - defaults to <code>auto</code> (which is 100%), but can be set to anything you'd like.</li>
+          <li>
+          <code>wrapClasses</code> - optional classes to be applied to the outer wrapper.</li>
+          <li>
+          <code>headerClasses</code> - optional classes to be applied to the fixed header element.</li>
+          <li>
+          <code>cellClasses</code> - optional classes to be applied to the header "cells".</li>
+          <li>
+          <code>paddedTable</code> - adds "padding" to the left and right of the table, but keeps the header full-width.</li>
+          </ul><h2>Examples</h2>
+
+          <h2>How it's different</h2>
+
+          <p>I wrote this plugin because I had a very specific set of requirements for a project, and because
+          none of the other plugins I found worked in a way that was useful to me.  Most of them duplicated
+          the <code>thead</code> with another one, which was just bizarre, in my opinion.</p>
+
+          <p>This plugin instead creates an HTML5 <code>header</code> element, which duplicates the html and spacing of the
+          <code>th</code> elements contained within the <code>thead</code> of a table.  This makes more sense to me, since divs can take
+          any <code>position</code> styling you want, <strong>and</strong> it allows you to use border-collapsing on your tables with ease (one of my requirements).</p>
+
+          <h3>License (MIT)</h3>
+
+          <p>Copyright (c) 2013 Kevin Whitaker</p>
+
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+          associated documentation files (the "Software"), to deal in the Software without restriction, 
+          including without limitation the rights to use, copy, modify, merge, publish, distribute, 
+          sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
+          furnished to do so, subject to the following conditions:</p>
+
+          <p>The above copyright notice and this permission notice shall be included in all copies or 
+          substantial portions of the Software.</p>
+
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+          INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+          PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE 
+          FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+          ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+          SOFTWARE.</p>
+        </section>
+
+        <footer>
+          Ya-fixed-table-header is maintained by <a href="https://github.com/kwhitaker">kwhitaker</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
