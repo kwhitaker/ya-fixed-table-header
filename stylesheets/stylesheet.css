@@ -382,6 +382,10 @@ footer a:hover {
   color: white;
 }
 
+.example-wrap {
+  margin-bottom: 20px;
+}
+
 #example1-wrap {
-  height: 300px;
+  height: 200px;
 }
