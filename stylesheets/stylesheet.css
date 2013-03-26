@@ -381,3 +381,7 @@ footer a:hover {
   background-color: black;
   color: white;
 }
+
+#example1-wrap {
+  height: 300px;
+}
