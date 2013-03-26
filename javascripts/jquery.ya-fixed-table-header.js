@@ -77,7 +77,7 @@ by Kevin Whitaker
           headerTemplate = "<header class=\"ya-fixed-header-header " + options.headerClasses + "\"/>";
           header = $(headerTemplate).prependTo(wrapper);
           header.css({
-            top: 0,
+            top: wrapper.parent().offset().top,
             left: wrapper.offset().left,
             width: wrapper.width()
           });
