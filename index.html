@@ -45,11 +45,9 @@
           <p>From there, just call it against a table as you would any other jQuery plugin:</p>
 
           <pre>
-            <code>
-              $(document).ready(function(){
-                $("#some-table").yaFixedHeader();
-              });
-            </code>
+            $(document).ready(function(){
+              $("#some-table").yaFixedHeader();
+            });
           </pre>
 
           <h2>Options</h2>
@@ -337,8 +335,8 @@
           the <code>thead</code> with another one, which was just bizarre, in my opinion.</p>
 
           <p>This plugin instead creates an HTML5 <code>header</code> element, which duplicates the html and spacing of the
-          <code>th</code> elements contained within the <code>thead</code> of a table.  This makes more sense to me, since divs can take
-          any <code>position</code> styling you want, <strong>and</strong> it allows you to use border-collapsing on your tables with ease (one of my requirements).</p>
+          <code>th</code> elements contained within the <code>thead</code> of a table.  This makes more sense to me, 
+          since it allows you to use border-collapsing on your tables with ease (one of my requirements).</p>
 
           <h3>License (MIT)</h3>
 
