@@ -81,7 +81,7 @@ by Kevin Whitaker
           setTimeout (->
             cell.css
               width: el.outerWidth()
-              height: el.height()
+              height: el.outerHeight()
               padding: el.css "padding"
               "padding-left": parseInt(el.css("padding-left")) + tableMargin
               "text-align": el.css "text-align"
