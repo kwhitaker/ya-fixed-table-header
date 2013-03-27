@@ -94,7 +94,7 @@ by Kevin Whitaker
             return setTimeout((function() {
               cell.css({
                 width: el.outerWidth(),
-                height: el.outerHeight(),
+                height: el.height(),
                 padding: el.css("padding"),
                 "padding-left": parseInt(el.css("padding-left")) + tableMargin
               });
