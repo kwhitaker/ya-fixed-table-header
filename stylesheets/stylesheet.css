@@ -63,7 +63,7 @@ a:hover {
   color: #c5000c;
 }
 
-header {
+header:not(.ya-fixed-header-header) {
   padding-top: 35px;
   padding-bottom: 25px;
 }
