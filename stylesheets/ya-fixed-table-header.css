@@ -12,6 +12,8 @@
   left: 0;
   right: 0;
   z-index: 150;
+  background: black;
+  *zoom: 1;
   -webkit-box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px;
   -moz-box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px;
   box-shadow: black 0 10px 10px -10px inset, gainsboro 0 10px 10px -10px; }
