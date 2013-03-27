@@ -391,18 +391,18 @@ footer a:hover {
 }
 
 #example2 th {
-  padding: 5px 10px;
+  padding: 10px 5px;
 }
 
-.custom-wrap {
+.ya-fixed-header-wrap.custom-wrap {
   border: 2px solid darkgray;
 }
 
-.custom-header {
+.ya-fixed-header-header.custom-header {
   background-color: lightsteelblue;
 }
 
-.custom-cell {
+.ya-fixed-header-cell.custom-cell {
   color: black;
   font-style: italic;
   font-weight: bold;
