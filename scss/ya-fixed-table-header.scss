@@ -5,7 +5,6 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin-top: -10px;
 
   &.padded-table table {
     margin-left: 20px;
@@ -14,7 +13,8 @@
 }
 
 .ya-fixed-header-header {
-  position: fixed;
+  position: absolute;
+  top: 0; left: 0; right: 0;
   z-index: 150;
   background: black;
   *zoom: 1;

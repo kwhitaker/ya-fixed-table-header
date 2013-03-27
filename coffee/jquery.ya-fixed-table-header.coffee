@@ -62,12 +62,8 @@ by Kevin Whitaker
         ###
         Build the header
         ###
-        headerTemplate = "<header class=\"ya-fixed-header-header #{options.headerClasses}\"/>"
+        headerTemplate = "<header class=\"ya-fixed-header-header clear #{options.headerClasses}\"/>"
         header = $(headerTemplate).prependTo wrapper
-        header.css
-          top: wrapper.parent().offset().top
-          left: wrapper.offset().left
-          width: wrapper.width()
 
         ###
         Create the header cells
@@ -102,15 +98,13 @@ by Kevin Whitaker
         $("thead", @).css "visibility", "hidden"
 
       if options.width is ("auto" or "100%") or options.height is ("auto" or "100%")
-        ###
-        Using timeouts here so that we can run the code *after*
-        the resizing is done, in theory.
-        http://www.jquery4u.com/events/jquery-capture-window-resize-event/
-        ###
         $(window).on "resize", (e) =>
           table = $(@)
           $(window).resize ->
             reSizeTable table, options
+
+      $(wrapper).scroll =>
+        scrollWatch wrapper, header
 
   reSizeTable = (table, options) ->
     wrapper = table.parents ".ya-fixed-header-wrap"
@@ -133,10 +127,6 @@ by Kevin Whitaker
       height: wrapperHeight
       "margin-left": wrapperMarginLeft
 
-    header.css 
-      width: wrapper.width()
-      top: wrapper.parent().offset().top
-
     $("thead th", table).each (index, el) ->
       el = $(el)
       cell = $(el.data("headerCell"))
@@ -148,5 +138,9 @@ by Kevin Whitaker
         height: el.outerHeight()
         padding: el.css "padding"
         "padding-left": parseInt(el.css("padding-left")) + tableMargin
+
+  scrollWatch = (wrapper, header) ->
+    header.css "top", wrapper.scrollTop()
+    false
 
 ) jQuery
