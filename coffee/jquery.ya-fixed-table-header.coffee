@@ -62,7 +62,7 @@ by Kevin Whitaker
         ###
         Build the header
         ###
-        headerTemplate = "<header class=\"ya-fixed-header-header clear #{options.headerClasses}\"/>"
+        headerTemplate = "<header class=\"ya-fixed-header-header #{options.headerClasses}\"/>"
         header = $(headerTemplate).prependTo wrapper
 
         ###
