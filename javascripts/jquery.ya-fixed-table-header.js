@@ -94,7 +94,7 @@ by Kevin Whitaker
             return setTimeout((function() {
               cell.css({
                 width: el.outerWidth(),
-                height: el.outerHeight(),
+                height: el.height(),
                 padding: el.css("padding"),
                 "padding-left": parseInt(el.css("padding-left")) + tableMargin,
                 "text-align": el.css("text-align")
@@ -158,7 +158,7 @@ by Kevin Whitaker
         tableMargin = parseInt(table.css("margin-left"));
         return cell.css({
           width: el.outerWidth(),
-          height: el.outerHeight(),
+          height: el.height(),
           padding: el.css("padding"),
           "padding-left": parseInt(el.css("padding-left")) + tableMargin
         });
