@@ -12,7 +12,7 @@ by Kevin Whitaker
 (function() {
 
   (function($) {
-    var reSizeTable;
+    var reSizeTable, scrollWatch;
     $.yaFixedHeader = {
       defaults: {
         height: "auto",
@@ -74,13 +74,8 @@ by Kevin Whitaker
           Build the header
           */
 
-          headerTemplate = "<header class=\"ya-fixed-header-header " + options.headerClasses + "\"/>";
+          headerTemplate = "<header class=\"ya-fixed-header-header clear " + options.headerClasses + "\"/>";
           header = $(headerTemplate).prependTo(wrapper);
-          header.css({
-            top: wrapper.parent().offset().top,
-            left: wrapper.offset().left,
-            width: wrapper.width()
-          });
           /*
           Create the header cells
           */
@@ -118,13 +113,7 @@ by Kevin Whitaker
           $("thead", _this).css("visibility", "hidden");
         }
         if (options.width === ("auto" || "100%") || options.height === ("auto" || "100%")) {
-          /*
-          Using timeouts here so that we can run the code *after*
-          the resizing is done, in theory.
-          http://www.jquery4u.com/events/jquery-capture-window-resize-event/
-          */
-
-          return $(window).on("resize", function(e) {
+          $(window).on("resize", function(e) {
             var table;
             table = $(_this);
             return $(window).resize(function() {
@@ -132,9 +121,12 @@ by Kevin Whitaker
             });
           });
         }
+        return $(wrapper).scroll(function() {
+          return scrollWatch(wrapper, header);
+        });
       });
     };
-    return reSizeTable = function(table, options) {
+    reSizeTable = function(table, options) {
       var header, wrapper, wrapperHeight, wrapperMarginLeft, wrapperWidth;
       wrapper = table.parents(".ya-fixed-header-wrap");
       header = $(".ya-fixed-header-header", wrapper);
@@ -155,10 +147,6 @@ by Kevin Whitaker
         height: wrapperHeight,
         "margin-left": wrapperMarginLeft
       });
-      header.css({
-        width: wrapper.width(),
-        top: wrapper.parent().offset().top
-      });
       return $("thead th", table).each(function(index, el) {
         var cell, tableMargin;
         el = $(el);
@@ -172,6 +160,10 @@ by Kevin Whitaker
           "padding-left": parseInt(el.css("padding-left")) + tableMargin
         });
       });
+    };
+    return scrollWatch = function(wrapper, header) {
+      header.css("top", wrapper.scrollTop());
+      return false;
     };
   })(jQuery);
 
