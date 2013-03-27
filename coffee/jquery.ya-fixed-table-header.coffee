@@ -84,6 +84,7 @@ by Kevin Whitaker
               height: el.height()
               padding: el.css "padding"
               "padding-left": parseInt(el.css("padding-left")) + tableMargin
+              "text-align": el.css "text-align"
 
             el.data
               headerCell: cell

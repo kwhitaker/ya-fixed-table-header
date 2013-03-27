@@ -96,7 +96,8 @@ by Kevin Whitaker
                 width: el.outerWidth(),
                 height: el.height(),
                 padding: el.css("padding"),
-                "padding-left": parseInt(el.css("padding-left")) + tableMargin
+                "padding-left": parseInt(el.css("padding-left")) + tableMargin,
+                "text-align": el.css("text-align")
               });
               return el.data({
                 headerCell: cell,
