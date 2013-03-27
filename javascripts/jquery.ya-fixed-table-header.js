@@ -141,6 +141,8 @@ by Kevin Whitaker
       }
       if (options.height === "auto" || "100%") {
         wrapperHeight = wrapper.parent().height() - wrapper.parent().offset().top + wrapper.offset().top;
+      } else {
+        wrapperHeight = options.height;
       }
       wrapper.css({
         width: wrapperWidth,
