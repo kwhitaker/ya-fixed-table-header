@@ -44,11 +44,11 @@
 
           <p>From there, just call it against a table as you would any other jQuery plugin:</p>
 
-          <pre>
+          <pre><code>
 $(document).ready(function(){
   $("#some-table").yaFixedHeader();
 });
-          </pre>
+          </code></pre>
 
           <h2>Options</h2>
 
@@ -198,6 +198,11 @@ $(document).ready(function(){
               </tbody>
             </table>
           </div>
+          <pre><code>
+$(document).ready(function(){
+  $("#example1").yaFixedHeader();
+});
+          </code></pre>          
 
           <p>Adding custom classes</p>
           <div id="example2-wrap" class="example-wrap">
@@ -327,6 +332,15 @@ $(document).ready(function(){
               </tbody>
             </table>
           </div>          
+          <pre><code>
+$(document).ready(function(){
+  $("#example2").yaFixedHeader({
+    wrapClasses: "custom-wrap",
+    headerClasses: "custom-header",
+    cellClasses: "custom-cell"
+  });      
+});
+          </code></pre>
 
           <h2>How it's different</h2>
 
